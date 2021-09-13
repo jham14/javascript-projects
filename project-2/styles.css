@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin-left: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  height: 80vh;
+  background: #ffffff;
+  text-align: center;
+}
+
+h1, h2 {
+  font-family: arial;
+  font-weight: bold;
+}
+
+.container {
+  margin-top: 60px;
+}
+
+#colors {
+  width: 170px;
+  text-align: center;
+  font-family: monospace;
+  font-size: 25px;
+}
+
+.option {
+  font-family: monospace;
+  font-size: 25px;
+}
+
+ .animation{
+  margin-top: 10px;
+  /* margin-right:100px;
+  margin-left: 100px; */
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: red;
+  position: relative;
+  animation-name: example;
+  animation-duration: 6s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:135px; top:0px;}
+  50%  {background-color:blue; left:135px; top:120px;}
+  75%  {background-color:green; left:0px; top:120px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
