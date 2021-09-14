@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 0;
+  margin: 10px 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+body {
+  animation: colorchange 175s linear 1s infinite; /* animation-name followed by duration in seconds*/
+     /* could also use milliseconds (ms) or something like 2.5s */
+  -webkit-animation: colorchange 175s linear 0s infinite alternate; /* Chrome and Safari */
+}
+
+@keyframes colorchange
+{
+  0%   {background: red; color: cyan;}
+  33%  {background: green; color: magenta;}
+  66%  {background: blue; color: yellow;}
+  100% {background: red; color: cyan;}
+}
+
+@-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+{
+  0%   {background: red; color: cyan;}
+  33%  {background: green; color: magenta;}
+  66%  {background: blue; color: yellow;}
+  100% {background: red; color: cyan;}
+}
+
+img {
+  height: 240px;
+  width: 200px;
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+h1, h2 {
+  font-family: 'Teko', sans-serif;
+  color: black;
+  font-size: 40px;
+}
+
+label {
+  font-family: 'Teko', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+}
+
+.guessSubmit {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  text-decoration: underline;
+  font-weight: bold;
+  background-color: #4CAF50;
+  cursor: pointer;
+}
+
+.guessField {
+  height: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+p {
+  font-family: 'Cedarville Cursive', cursive;
+  font-size: 30px;
+}

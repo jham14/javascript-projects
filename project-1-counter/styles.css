@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: darkblue;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100vh;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+header {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header h1 {
+  font-size: 60px;
+  text-align: center;
+}
+
+.counters {
+  background: #0f479a;
+  color: white;
+  padding: 40px 20px;
+  border-top: 3px lightskyblue solid;
+}
+
+.counters .container {
+  display: grid;
+  grid-gap: 30px;
+  text-align: center;
+}
+
+.counters .counter {
+  font-size: 45px;
+  margin: 10px 10px;
+}
+
+#counter {
+  text-align: center;
+  font-size: 40px;
+}
+
+#increment {
+  margin-left: 50px;
+  height: 50px;
+  width: 50px;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+#decrement {
+  margin-right: 50px;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+/* false counter: */
+.flex {
+display: flex;
+justify-content: center;
+padding-right: 55px;
+}
+
+.faux {
+  font-size: 50px;
+
+}
+
+.still {
+  padding-top: 30px;
+}
+
+img {
+  margin-top: 10px;
+}
+
+.sad {
+  margin-top: 25px;
+  margin-left: 5px;
+}
+
+.fade-in {
+  visibility: hidden;
+  animation: fadeIn 10s;
+  -webkit-animation: fadeIn 10s;
+  -moz-animation: fadeIn 10s;
+  -o-animation: fadeIn 10s;
+  -ms-animation: fadeIn 10s;
+}
+  @keyframes  fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}

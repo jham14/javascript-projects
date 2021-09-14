@@ -1,0 +1,59 @@
+body {
+  background-color: #ddd;
+}
+
+.hal {
+  max-width: 100%;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  border-radius: 90%;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.hands {
+  display: flex;
+  justify-content: center;
+}
+
+.hand:hover {
+  transform: scale(1.2);
+}
+
+.hand {
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 4rem;
+  max-width: 100%;
+  cursor: pointer;
+}
+
+.outcomes {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  display-items: center;
+  font-size: 40px;
+  max-width: 100%;
+}
+
+.score {
+  margin-left: 0.1rem;
+  font-size: 25px;
+}
+
+.result {
+  opacity: .5;
+}
+
+.winner {
+  opacity: 1;
+  font-size: 3rem;
+}
