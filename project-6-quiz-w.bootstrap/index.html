@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>Quiz!</title>
+  </head>
+<body>
+
+<!-- top -->
+<div class="intro py-3 bg-white text-center">
+  <div class="container">
+    <h2 class="display-3 my-4">Ever Heard of Caesar? - Quiz</h2>
+  </div>
+</div>
+
+<!--result-->
+<div class="result py-4 d-none bg-light text-center">
+  <div class="container lead">
+    <p>Your rank:  <span class="display-4 p-3 d-none">A mere Pleb...</span><span class="display-4 p-3 d-none">Centurion</span><span class="display-4 p-3 d-none">Consul</span><span class="display-4 p-3 d-none">Imperator!</span>
+    <p class="marks d-none">0 / 3</p>
+    <p class="marks d-none">1 / 3</p>
+    <p class="marks d-none">2 / 3</p>
+    <p class="marks d-none">3 / 3</p>
+    </p>
+  </div>
+</div>
+
+<!-- quiz section -->
+<div class="quiz py-4">
+  <div class="container">
+      <h2 class="my-5 text-white">The Questions..</h2>
+
+      <form class="quiz-form text-light">
+        <div class="my-5">
+          <p class="lead font-weight-normal">1. In what year did Caesar cross the Rubicon?</p>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q1" value="A" checked>
+            <label class="form-check-label">23CE</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q1" value="B">
+            <label class="form-check-label">49BCE</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q1" value="C">
+            <label class="form-check-label">60BCE</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q1" value="D">
+            <label class="form-check-label">36CE</label>
+          </div>
+          <p class="d-none correct-answer" data-correct>Recte dicis! Well done!</p>
+          <p class="d-none incorrect-answer">Erras! Incorrect. Caesar led around 4,000 men across the Rubicon in 49BCE.</p>
+        </div>
+
+        <div class="my-5">
+          <p class="lead font-weight-normal">2. How old was Caesar when he was assassinated?</p>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q2" value="A" checked>
+            <label class="form-check-label">61</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q2" value="B">
+            <label class="form-check-label">55</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q2" value="C">
+            <label class="form-check-label">43</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q2" value="D">
+            <label class="form-check-label">48</label>
+          </div>
+          <p class="d-none correct-answer">Recte dicis! Well done!</p>
+          <p class="d-none incorrect-answer" data-correct>Erras! Incorrect. Caesar was aged 55 when he was victim to 23 stab wounds.</p>
+        </div>
+
+        <div class="my-5">
+          <p class="lead font-weight-normal">3. Caesar formed the First Triumvirate with Pompey and which other general?</p>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q3" value="A" checked>
+            <label class="form-check-label">Agricola</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q3" value="B">
+            <label class="form-check-label">Marcus Antonius</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q3" value="C">
+            <label class="form-check-label">Agrippa</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q3" value="D">
+            <label class="form-check-label">Crassus</label>
+          </div>
+          <p class="d-none correct-answer">Recte dicis! Well done!</p>
+          <p class="d-none incorrect-answer">Erras! Incorrect. Wealthy and influential general Crassus was the third Triumvirate member.</p>
+        </div>
+
+        <div class="text-center">
+          <input type="submit" class="btn btn-light form-button" onclick="disableSubmit()">
+          <p class="d-none refresh">Refresh page to go again</p>
+        </div>
+      </form>
+
+  </div>
+</div>
+
+</body>
+<script src="main.js"></script>
+</html>
