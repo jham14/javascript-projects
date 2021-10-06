@@ -42,7 +42,7 @@ function calculateTip() {
   //totals innerHTML
   document.getElementById("tip").innerHTML = total;
   document.querySelector(".tipTotal").innerHTML = tipTotal.toFixed(2);
-  document.querySelector(".tipAndBill").innerHTML = tipAndBill.toFixed(2);
+  document.querySelector(".tipAndBill").innerHTML = tipAndBill;
 
 }
 
