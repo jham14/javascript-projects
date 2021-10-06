@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Tip Calculator</title>
+  </head>
+<body>
+
+<div id="container">
+
+  <h1>Tip Calculator</h1>
+
+  <!--calculator-->
+  <div id="calculator">
+    <form>
+
+      <p>How much is your bill?<p>
+        £ <input id="billamt" type="text" placeholder="">
+
+      <p>How was your service?<p>
+      <select id="serviceQual">
+        <!-- w. character codes -->
+        <option disabled selected value="0">- Choose an Option -</option>
+        <option value="0.05">5&#37; &#45; Poor</option>
+        <option value="0.1">10&#37; &#45; Average</option>
+        <option value="0.15">15&#37; &#45; Good</option>
+        <option value="0.2">20&#37; &#45; Excellent</option>
+        <option value="0.3">30&#37; &#45; Perfect</option>
+      </select>
+
+    </form>
+
+
+    <p>How many people are sharing the bill?</p>
+    <input id="peopleamt" type="text" placeholder=""> people
+
+    <div class="submit">
+      <button type="button" id="calculate">Calculate</button>
+    </div>
+
+  </div>
+  <!--calculator end-->
+
+
+
+  <!--totals-->
+  <div class="totalsContainer">
+    <div id="tipEach">
+      <p>Tip:  £</p><span id="tip">0.00</span><p class="perperson">per person</p>
+    </div>
+
+    <div id="tipTotal">
+      <p>Tip Total: £</p><span class="tipTotal">0.00</span>
+    </div>
+
+    <div id="billPlusTip">
+      <p>Tip Total + Bill:  £</p><span class="tipAndBill">0.00</span>
+    </div>
+  </div>
+
+</div>
+
+</body>
+<script src="main.js"></script>
+</html>
