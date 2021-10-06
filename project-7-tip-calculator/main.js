@@ -32,7 +32,7 @@ function calculateTip() {
   //toFixed() - two digits after decimal point
   total = total.toFixed(2);
   let tipTotal = total * numOfPeople
-  let tipAndBill = billAmount + tipTotal
+  let tipAndBill = tipTotal + Math.round(billAmount * 100) / 100
 
 
   //Display tip totals on click
@@ -42,7 +42,7 @@ function calculateTip() {
   //totals innerHTML
   document.getElementById("tip").innerHTML = total;
   document.querySelector(".tipTotal").innerHTML = tipTotal.toFixed(2);
-  document.querySelector(".tipAndBill").innerHTML = tipAndBill;
+  document.querySelector(".tipAndBill").innerHTML = tipAndBill.toFixed(2);
 
 }
 
