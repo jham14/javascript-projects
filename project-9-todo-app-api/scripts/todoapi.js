@@ -1,18 +1,13 @@
+//get 5 todos from placeholder - then update todoArray and create templates
+function getTodos () {
+  axios.get('https://jsonplaceholder.typicode.com/todos?_limit=5')
+    .then(response => {
+      const data = response.data;
+      todoArray = data
+      todoArray.forEach(i => {
+        generateTemplate(i)
+      });
 
-
-const placeHoldTodos = async () => {
-    const response = await fetch('https://jsonplaceholder.typicode.com/todos/1')
-    const data = await response.json();
-    return data
+    })
+    .catch(error => console.log(error));
 };
-
-placeHoldTodos().then(data => {
-  let apiArray = []
-  apiArray.push(data)
-
-  apiArray.forEach((item) => {
-
-  generateTemplate(item)
-  });
-
-});

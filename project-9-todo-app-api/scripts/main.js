@@ -8,7 +8,7 @@ const ul = document.querySelector('ul');
 let todoArray = [];
 
 
-//generate new HTML template in <ul>
+// generate new HTML template in <ul>
 function generateTemplate(todo) {
 
   const html = `
@@ -50,7 +50,7 @@ addForm.addEventListener('submit', e => {
 function addTodo(todo){
   if(todo != ''){
     const todoItem = {
-      id: Date.now(),
+      id: Date.now() + Math.floor(Math.random()*1000000),
       title: todo,
     };
 
@@ -73,17 +73,14 @@ function renderTodos() {
 };
 
 
-//delete todo
+//delete todo - remove local storage todos if todoArray empty
 function deleteTodo(id){
 
   todoArray = todoArray.filter(item => {
-
     return item.id != id
-
-  });
-
-  addToLocalStorage(todoArray);
-
+  })
+      addToLocalStorage(todoArray)
+      if(todoArray.length === 0){localStorage.removeItem('todos')}
 };
 
 
@@ -91,10 +88,10 @@ function addToLocalStorage(todos){
   localStorage.setItem('todos', JSON.stringify(todos));
 };
 
-//render todos on page load
+// render local todos on page load - else load API todos
 if(localStorage.getItem('todos')){
   renderTodos()
-}
+} else getTodos()
 
 
 // delete todo via trash can icon - remove() method on parent element
