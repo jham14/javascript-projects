@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(36,110,219,1) 0%, rgba(0,212,255,1) 100%);
+}
+
+img {
+  width: 60%;
+  height: auto;
+  border-radius: 25%;
+}
+
+body .container {
+  border: solid black 1px;
+  margin-inline: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: min(75%, 50.5rem);
+  text-align: center;
+  border-radius: 20px;
+  padding: 10px;
+  background: #cde5f2;
+}
+
+a.button {
+  font-family: Courier New;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: red;
+  transition: background-color .5s;
+}
+
+hr {
+  margin: 0 auto;
+  width: 50%;
+  margin-top: 10px;
+  border-top: 2px solid rgba(68,125,117,.1);
+
+
+}
+
+.prep {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+
+.ingredients, .instructions{
+  width: 80%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.button {
+  /* display: block; */
+  background-color: #1c87c9;
+  border: none;
+  color: white;
+  padding: 15px 34px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+
+
+.button.video {
+  font-size: 15px;
+  padding: 10px 24px;
+
+}
+
+h1 {
+font-family: 'Roboto', sans-serif;
+margin-bottom: 5px;
+}
+
+h3 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 25px;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+
+h4 {
+  font-family: 'Dancing Script', cursive;
+  border-bottom: 2px solid rgba(68,125,117,.1);
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+p {
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+
+
+/* mobile */
+@media screen and (max-width: 600px){
+
+  .prep {
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  .method {
+    margin-top: 10px;
+  }
+
+  body .container {
+    width: min(90%, 50.5rem);
+  }
+
+  .ingredients {
+    padding-bottom: 15px;
+  }
+
+  .instructions {
+    border-top: 2px solid rgba(68,125,117,.1);
+  }
+
+}
