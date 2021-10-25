@@ -38,10 +38,10 @@ function renderRecipe(recipe) {
     const toArray = Object.entries(recipe)
 
     let filterMeasures = toArray.filter(([key, val]) => key.includes('Measure')
-     && val != '')
+     && val != 0 && val !== null)
      console.log(filterMeasures);
-    let filterIngreds = toArray.filter(([key, val]) => key.includes('Ingred') && val != '')
-
+    let filterIngreds = toArray.filter(([key, val]) => key.includes('Ingred') && val != 0)
+    console.log(filterIngreds);
     filterIngreds.forEach((ingred, index) => {
         renderIngreds(filterMeasures[index], ingred)
     });
