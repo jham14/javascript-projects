@@ -41,8 +41,6 @@ hr {
   width: 50%;
   margin-top: 10px;
   border-top: 2px solid rgba(68,125,117,.1);
-
-
 }
 
 .prep {
@@ -76,8 +74,6 @@ ul {
   cursor: pointer;
 }
 
-
-
 .button.video {
   font-size: 15px;
   padding: 10px 24px;
@@ -107,6 +103,14 @@ p {
   font-family: 'Open Sans Condensed', sans-serif;
 }
 
+.item {
+  padding-bottom: 3px;
+}
+
+.divider {
+  border-top: 1px solid #bbb;
+  margin-top: 0;
+}
 
 
 /* mobile */

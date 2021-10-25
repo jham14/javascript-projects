@@ -52,9 +52,10 @@ function renderRecipe(recipe) {
 function renderIngreds(measure, ingred) {
 
   const html = `
-  <li>
-    <p class="item">${measure[1]}&nbsp;${ingred[1]}</p>
+  <li class="item">
+    <p>${measure[1]}&nbsp;${ingred[1]}</p>
   </li>
+  <hr class="divider">  
   `
   ingredsList.innerHTML += html
 
