@@ -34,7 +34,7 @@ function renderRecipe(recipe) {
     method.innerHTML = recipe.strInstructions;
     image.src = recipe.strMealThumb;
 
-    //convert object to array - filter key/values - back to object
+    //convert object to array - filter key/values - forEach to renderIngreds
     const toArray = Object.entries(recipe)
 
     let filterMeasures = toArray.filter(([key, val]) => key.includes('Measure')
@@ -55,7 +55,7 @@ function renderIngreds(measure, ingred) {
   <li class="item">
     <p>${measure[1]}&nbsp;${ingred[1]}</p>
   </li>
-  <hr class="divider">  
+  <hr class="divider">
   `
   ingredsList.innerHTML += html
 
