@@ -23,9 +23,9 @@ function getRecipe () {
     recipeArray = res.meals[0]
     renderRecipe(recipeArray)
   })
-  .catch(err => console.log(err))
+  .catch(err => console.log(err));
 
-}
+};
 
 function renderRecipe(recipe) {
 
@@ -33,39 +33,29 @@ function renderRecipe(recipe) {
     youtube.href = recipe.strYoutube;
     method.innerHTML = recipe.strInstructions;
     image.src = recipe.strMealThumb;
-    console.log(recipe);
-
 
     //convert object to array - filter key/values - back to object
     const toArray = Object.entries(recipe)
-    console.log(toArray);
 
     let filterMeasures = toArray.filter(([key, val]) => key.includes('Measure')
      && val != '')
      console.log(filterMeasures);
     let filterIngreds = toArray.filter(([key, val]) => key.includes('Ingred') && val != '')
 
-    console.log(filterIngreds);
-    filterIngreds.forEach((ingred) => {
-        renderIngreds(ingred)
+    filterIngreds.forEach((ingred, index) => {
+        renderIngreds(filterMeasures[index], ingred)
     });
 
-  }
+  };
 
 
-
-function renderIngreds(ingred) {
+function renderIngreds(measure, ingred) {
 
   const html = `
   <li>
-    <p class="item">${ingred[1]}</p>
+    <p class="item">${measure[1]}&nbsp;${ingred[1]}</p>
   </li>
-
   `
   ingredsList.innerHTML += html
 
-
-}
-// console.log(item);
-// let item = document.querySelector('.item')
-// console.log(item);
+};
